@@ -6,6 +6,4 @@ internal class PatenteException : ApplicationException
     public PatenteException(string message) : base(message) { }
     public PatenteException(string msg, Exception inner) : base(msg, inner) { }
 
-
-
 }

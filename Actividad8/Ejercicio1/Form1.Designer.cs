@@ -30,15 +30,16 @@
         {
             button1 = new Button();
             tbMostrar = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(424, 144);
+            button1.Location = new Point(440, 65);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 38);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Elegir archivo";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -50,11 +51,22 @@
             tbMostrar.Size = new Size(367, 344);
             tbMostrar.TabIndex = 1;
             // 
+            // button2
+            // 
+            button2.Location = new Point(440, 120);
+            button2.Name = "button2";
+            button2.Size = new Size(86, 40);
+            button2.TabIndex = 2;
+            button2.Text = "Ruta harcodeada";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(550, 450);
+            Controls.Add(button2);
             Controls.Add(tbMostrar);
             Controls.Add(button1);
             Name = "Form1";
@@ -68,5 +80,6 @@
         private Button button1;
         public TextBox tbMostrar;
         private TextBox textBox1;
+        private Button button2;
     }
 }
