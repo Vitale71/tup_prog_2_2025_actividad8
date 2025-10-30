@@ -1,4 +1,7 @@
-﻿namespace Ejercicio1.Models;
+﻿using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Ejercicio1.Models;
 
 public class Vehiculo : IExportable
 {
@@ -30,7 +33,12 @@ public class Vehiculo : IExportable
 
     public void Importar(string cadena)
     {
-        throw new NotImplementedException();
+        //Regex R = new Regex(@"([a-z]{3}\d{3});([^<]+)}", RegexOptions.IgnoreCase);
+        string[] separator = cadena.Split(';');
+
+        string patente = separator[0];
+        double importer = Convert.ToDouble(separator[1]);
+        Vehiculo auto = new Vehiculo(patente, importer);
     }
 
     public string Exportar()
